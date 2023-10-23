@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PeparSis-Game</title>
+</head>
+<body>
+
+    <h2>Rock Paper Scissors Game</h2>
+
+    <button onclick="
+
+    //generate a random number
+        const randNumber = Math.random();
+
+        //converted the move to computer move
+
+        let computerMove = '';
+        if (randNumber >= 0 && randNumber < 1/3) { 
+            computerMove = ('Rock');
+        } else if (randNumber >= 1 / 3 && randNumber < 2 / 3){
+            computerMove = ('Paper');
+        } else if (randNumber >= 2 / 3 && randNumber < 1) {
+            computerMove= ('Scissors');
+        }
+
+         // compare our move with the computer Move
+
+        let result = '';
+        if (computerMove === 'Rock') {
+            result = 'Draw';
+        } else if (computerMove === 'Paper') {
+            result = 'You lose';
+        } else if (computerMove === 'Scissors') {
+            result = 'You Win!';
+        }
+
+        //display the result in a pop up
+
+        alert(`You picked Rock. Computer picked ${computerMove}. ${result}`);
+            
+    ">Rock</button>
+
+
+
+
+    <button onclick="
+    
+    //generate a random number
+        const randNumber = Math.random();
+
+        //converted the move to computer move
+
+        let computerMove = '';
+        if (randNumber >= 0 && randNumber < 1/3) { 
+            computerMove = ('Rock');
+        } else if (randNumber >= 1 / 3 && randNumber < 2 / 3){
+            computerMove = ('Paper');
+        } else if (randNumber >= 2 / 3 && randNumber < 1) {
+            computerMove= ('Scissors');
+        }
+
+         // compare our move with the computer Move
+
+        let result = '';
+        if (computerMove === 'Rock') {
+            result = 'You Win';
+        } else if (computerMove === 'Paper') {
+            result = 'Draw';
+        } else if (computerMove === 'Scissors') {
+            result = 'You lose!';
+        }
+
+        //display the result in a pop up
+
+        alert(`You picked Paper. Computer picked ${computerMove}. ${result}`);
+               
+    ">Paper</button>
+
+
+
+
+    <button onclick="
+    
+
+    //generate a random number
+        const randNumber = Math.random();
+
+        //converted the move to computer move
+
+        let computerMove = '';
+        if (randNumber >= 0 && randNumber < 1/3) { 
+            computerMove = ('Rock');
+        } else if (randNumber >= 1 / 3 && randNumber < 2 / 3){
+            computerMove = ('Paper');
+        } else if (randNumber >= 2 / 3 && randNumber < 1) {
+            computerMove= ('Scissors');
+        }
+
+         // compare our move with the computer Move
+
+        let result = '';
+        if (computerMove === 'Rock') {
+            result = 'you lose';
+        } else if (computerMove === 'Paper') {
+            result = 'You win';
+        } else if (computerMove === 'Scissors') {
+            result = 'Draw!';
+        }
+
+        //display the result in a pop up
+
+        alert(`You picked Scissors. Computer picked ${computerMove}. ${result}`);
+        
+    ">Scissors</button>
+
+    <script>
+   
+    </script>
+
+    
+</body>
+</html>

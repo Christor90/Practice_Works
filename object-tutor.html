@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects-Phase</title>
+</head>
+<body>
+
+
+
+    <script>
+
+        const product = {
+            name: 'Socks',
+            price: 1090,
+            'delivery-time': '1 Day',
+
+            rating: {
+                stars: 4.5,
+                count: 87
+            }
+        };
+
+        console.log(product);
+        console.log(product.name);
+        
+
+        product.name = 'Good Socks New';
+        console.log(product);
+        console.log(product['delivery-time']);
+        console.log(product.rating.count)
+    </script>
+    
+</body>
+</html>

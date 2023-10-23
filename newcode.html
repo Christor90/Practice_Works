@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CalPro</title>
+
+
+    <style>
+
+        body {
+            /* background-color: black ; */
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        section{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+
+        .main{
+            margin-top: 20px;
+            border: 1px solid #999;
+            padding: 0.5em 1em;
+            border-radius: 8px;
+            /* background: #999; */
+            box-shadow: 0px 3px 10px rgb(0 0 0 / 0.2);
+        }
+
+
+        .cal-btn {
+            height: 60px;
+            width: 60px;
+            border-radius: 60px;
+            border: none;
+            font-size: 26px;
+            cursor: pointer;
+            margin-right: 5px;
+            background-color: black;
+            color: aliceblue;
+        }
+
+        .cal-orange {
+            background-color: rgb(224, 155, 50);
+        }
+
+        .cal-equal {
+            background-color: rgb(236, 63, 10);
+        }
+
+        .cal-clear {
+            height: 50px;
+            width: 90px;
+            border: none;
+            font-size: 15px;
+            cursor: pointer;
+            margin-top: 20px;
+            background-color: rgba(67, 24, 107, 0.5);
+            color: aliceblue;
+            border-radius: 10px;
+        }
+
+
+        .write-up {
+            border: none;
+            background-color: rgba(137, 116, 156, 0.5);
+            font-size: 22px ;
+            border-radius: 8px;
+            height: 20px;
+            width: 255px;
+            outline: none;
+            padding: 8px 2px;
+            color: rgb(19, 18, 18);
+            font-weight: 500;
+
+        }
+
+    </style>
+
+
+
+
+
+
+
+
+</head>
+
+<body>
+
+    <section>
+
+        <div class="main">
+
+            <p>My Calculation Challenge</p>
+
+        <input class="write-up" id="showTotal">
+    
+        <p>
+            <button class="cal-btn" onclick="getAllValues(1)">1</button>
+    
+            <button class="cal-btn" onclick="getAllValues(2)">2</button>
+    
+            <button class="cal-btn" onclick="getAllValues(3)">3</button>
+    
+            <button class="cal-btn cal-orange" onclick="getAllValues('+')">+</button>
+        </p>
+    
+        <p>
+            <button class="cal-btn" onclick="getAllValues(4)">4</button>
+    
+            <button class="cal-btn" onclick="getAllValues(5)">5</button>
+    
+            <button class="cal-btn" onclick="getAllValues(6)">6</button>
+    
+            <button class="cal-btn cal-orange" onclick="getAllValues('-')">-</button>
+        </p>
+    
+        <p>
+            <button class="cal-btn" onclick="getAllValues(7)">7</button>
+    
+            <button class="cal-btn" onclick="getAllValues(8)">8</button>
+    
+            <button class="cal-btn" onclick="getAllValues(9)">9</button>
+    
+            <button class="cal-btn cal-orange" onclick="getAllValues('*')">*</button>
+        </p>
+    
+        <p>
+            <button class="cal-btn" onclick="getAllValues(0)">0</button>
+    
+            <button class="cal-btn" onclick="getAllValues('.')">.</button>
+    
+            <button class="cal-btn cal-orange cal-equal"  onclick="computeValues()">=</button>
+    
+            <button class="cal-btn cal-orange" onclick="getAllValues('/')">/</button>
+        </p>
+    
+    
+        <button class="cal-clear" onclick="clearValues()">Clear</button>
+
+
+    </section>
+
+        </div>
+
+        
+
+    
+
+    <script>
+       
+        function getAllValues (value) {
+            document.getElementById('showTotal').value += value;
+        }
+
+        function computeValues () {  
+        let calculation = document.getElementById('showTotal').value;
+
+        document.getElementById('showTotal').value = eval(calculation);
+        }
+
+
+        function clearValues () {
+            document.getElementById('showTotal').value = '';
+        }
+        
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator_Proj.</title>
+</head>
+<body>
+
+    <p>My-CALCULATOR</p>
+
+    <button onclick="
+        updateCalculator('1');
+    ">1</button>
+
+
+    <button onclick="
+     updateCalculator('2');
+    ">2</button>
+
+
+    <button onclick="
+       updateCalculator('3');
+    ">3</button>
+
+    <button onclick="
+        calculator += ' + ';
+        console.log(calculator);
+    ">+</button>
+
+
+    <button onclick="
+        // calculator =+ '=';
+        eval(calculator);
+        calculator = eval(calculator);
+        console.log(calculator);
+    ">=</button>
+
+    <button onclick="
+        console.log('Clear all')
+        calculator = '';
+        console.log(calculator);
+    ">Clear</button>
+
+
+
+
+
+
+<SCRipt>
+    let calculator = "";
+
+    function updateCalculator(value) {
+        calculator += value;
+        console.log(calculator);
+    }
+
+</SCRipt>
+    
+</body>
+</html>

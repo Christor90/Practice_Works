@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CalPro</title>
+</head>
+<body>
+
+    <p>My Calculation Challenge</p>
+
+    <input id="showTotal">
+
+<p>
+    <button onclick=func(1)>1</button>
+
+    <button onclick=func(2)>2</button>
+
+    <button onclick=func(3)>3</button>
+
+    <button onclick="func('+')">+</button>
+</p>
+
+
+<p>
+    <button onclick=func(4)>4</button>
+
+    <button onclick=func(5)>5</button>
+
+    <button onclick=func(6)>6</button>
+
+    <button onclick="func('-')">-</button>
+</p>
+
+<p>
+    <button onclick="func(7)">7</button>
+
+    <button onclick="func(8)">8</button>
+
+    <button onclick="func(9)">9</button>
+
+    <button onclick="func('*')">*</button>
+</p>
+
+<p>
+    <button onclick="func(0)">0</button>
+
+    <button onclick="func('.')">.</button>
+
+    <button onclick=calc()>=</button>
+
+    <button onclick="func('/')">/</button>
+</p>
+
+
+<button onclick="clear()">Clear</button>
+
+
+   
+<script>
+    let calculation = '';
+
+    function func(val) {
+        document.getElementById('showTotal').value += val;
+    }
+
+    function calc(){
+        const a = document.getElementById('showTotal').value;
+        document.getElementById('showTotal').value = eval(a)
+    }
+
+    function clear(){
+        document.getElementById('showTotal').value = "";
+
+    }
+</script>
+    
+</body>
+</html>
